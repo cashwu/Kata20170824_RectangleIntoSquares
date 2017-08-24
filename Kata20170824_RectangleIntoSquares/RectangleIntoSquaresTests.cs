@@ -20,6 +20,12 @@ namespace Kata20170824_RectangleIntoSquares
             SqInRectShouldBe(new List<int> { 1, 1 }, 1, 2);
         }
 
+        [TestMethod]
+        public void input_2_1_should_return_1_1()
+        {
+            SqInRectShouldBe(new List<int> { 1, 1 }, 2, 1);
+        }
+
         private static void SqInRectShouldBe(List<int> expected, int lng, int wdth)
         {
             var s = new SqInRect();
