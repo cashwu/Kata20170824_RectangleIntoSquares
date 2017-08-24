@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata20170824_RectangleIntoSquares", "Kata20170824_RectangleIntoSquares\Kata20170824_RectangleIntoSquares.csproj", "{8CC731A1-6C06-4592-A63A-21ECF7DF20E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CC731A1-6C06-4592-A63A-21ECF7DF20E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC731A1-6C06-4592-A63A-21ECF7DF20E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC731A1-6C06-4592-A63A-21ECF7DF20E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC731A1-6C06-4592-A63A-21ECF7DF20E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52F91DDB-ED4D-4621-9A86-F5374A3E7EAC}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 558d441e-098f-469f-a835-7e85f9f88dfa
+	EndGlobalSection
+EndGlobal
