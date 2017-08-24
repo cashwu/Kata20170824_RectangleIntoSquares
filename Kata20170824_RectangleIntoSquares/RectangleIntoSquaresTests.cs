@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -32,6 +31,18 @@ namespace Kata20170824_RectangleIntoSquares
             SqInRectShouldBe(new List<int> { 2, 1, 1 }, 3, 2);
         }
 
+        [TestMethod]
+        public void input_3_5_should_return_3_2_1_1()
+        {
+            SqInRectShouldBe(new List<int> { 3, 2, 1, 1 }, 3, 5);
+        }
+
+        [TestMethod]
+        public void input_20_14_should_return_3_2_1_1()
+        {
+            SqInRectShouldBe(new List<int> { 14, 6, 6, 2, 2, 2 }, 20, 14);
+        }
+
         private static void SqInRectShouldBe(List<int> expected, int lng, int wdth)
         {
             var s = new SqInRect();
@@ -49,16 +60,23 @@ namespace Kata20170824_RectangleIntoSquares
                 return null;
             }
 
-            var baseLeng = Math.Min(lng, wdth);
             var result = new List<int>();
 
-            for (var i = baseLeng; i >= 1; i--)
-            {
-                result.Add(i);
+            var baseLeng = int.MaxValue;
 
-                if (i == 1)
+            while (baseLeng != 0)
+            {
+                baseLeng = Math.Min(lng, wdth);
+
+                lng = lng - baseLeng == 0 ? baseLeng : lng - baseLeng;
+                wdth = wdth - baseLeng == 0 ? baseLeng : wdth - baseLeng;
+
+                result.Add(baseLeng);
+
+                if (lng == wdth)
                 {
-                    result.Add(i);
+                    result.Add(wdth);
+                    break;
                 }
             }
 
