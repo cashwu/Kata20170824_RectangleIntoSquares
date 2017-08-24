@@ -62,22 +62,15 @@ namespace Kata20170824_RectangleIntoSquares
 
             var result = new List<int>();
 
-            var baseLeng = int.MaxValue;
-
-            while (baseLeng != 0)
+            while (lng > 0 && wdth > 0)
             {
-                baseLeng = Math.Min(lng, wdth);
+                var min = Math.Min(lng, wdth);
+                var max = Math.Max(lng, wdth);
 
-                lng = lng - baseLeng == 0 ? baseLeng : lng - baseLeng;
-                wdth = wdth - baseLeng == 0 ? baseLeng : wdth - baseLeng;
+                result.Add(min);
 
-                result.Add(baseLeng);
-
-                if (lng == wdth)
-                {
-                    result.Add(wdth);
-                    break;
-                }
+                lng = min;
+                wdth = max - min;
             }
 
             return result;
