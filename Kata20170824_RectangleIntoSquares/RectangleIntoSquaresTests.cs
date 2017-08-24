@@ -26,6 +26,12 @@ namespace Kata20170824_RectangleIntoSquares
             SqInRectShouldBe(new List<int> { 1, 1 }, 2, 1);
         }
 
+        [TestMethod]
+        public void input_3_2_should_return_2_1_1()
+        {
+            SqInRectShouldBe(new List<int> { 2, 1, 1 }, 3, 2);
+        }
+
         private static void SqInRectShouldBe(List<int> expected, int lng, int wdth)
         {
             var s = new SqInRect();
@@ -46,11 +52,12 @@ namespace Kata20170824_RectangleIntoSquares
             var baseLeng = Math.Min(lng, wdth);
             var result = new List<int>();
 
-            for (int i = baseLeng; i >= 1; i--)
+            for (var i = baseLeng; i >= 1; i--)
             {
+                result.Add(i);
+
                 if (i == 1)
                 {
-                    result.Add(i);
                     result.Add(i);
                 }
             }
